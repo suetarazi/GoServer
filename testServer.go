@@ -1,11 +1,13 @@
 package main
 
+//required libraries
 import (
 	"fmt"
 	"log"
 	"net/http"
 )
 
+//a separate function to handle the greeting "hello" with error handling
 func greetingHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
 		http.Error(w, "404 not found", http.StatusNotFound)
@@ -20,6 +22,7 @@ func greetingHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello and happy Friday!")
 }
 
+//main function to call greeting handler and actually start the server on port 8080
 func main() {
 	http.HandleFunc("/hello", greetingHandler)
 

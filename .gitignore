@@ -11,6 +11,9 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# JetBrains config directory
+.idea
+
 # secret key file
 https-server.key
 

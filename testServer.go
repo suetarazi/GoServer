@@ -16,6 +16,7 @@ func main() {
 		log.Fatal(err)
 
 	}*/
+	//updated code to include TLS
 	err := http.ListenAndServeTLS(":8080", "https-server.crt", "https-server.key", nil)
 	if err != nil {
 		log.Fatal(err)
@@ -37,4 +38,3 @@ func greetingHandler(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Fprintf(w, "Hello and happy Friday!")
 }
-

@@ -17,7 +17,7 @@ func main() {
 
 	}*/
 	//updated code to include TLS
-	err := http.ListenAndServeTLS(":8080", "https-server.crt", "https-server.key", nil)
+	err := http.ListenAndServeTLS(":8080", "test-server.crt", "https-server.key", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
